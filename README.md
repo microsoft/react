@@ -1,14 +1,27 @@
-# Project
+# REACT: Learning Customized Visual Models with Retrieval-Augmented Knowledge
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+[Haotian Liu](https://hliu.cc), [Kilho Son](#), [Jianwei Yang](https://jwyang.github.io/), [Ce Liu](#), [Jianfeng Gao](https://www.microsoft.com/en-us/research/people/jfgao/), [Yong Jae Lee*](https://pages.cs.wisc.edu/~yongjaelee/), [Chunyuan Li*](https://chunyuan.li/)
 
-As the maintainer of this project, please make a few updates:
+[[Project Page](https://react-vl.github.io/)] [[Paper](https://arxiv.org/abs/XXXXX)]
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+![Teaser figure](figures/concept.gif)
+
+- Introducing a customization stage to the lifecycle of foundation models!
+- REACT customizes foundation models to downstream tasks without the need of any labeled data.
+
+## Code Release
+
+Code comming soon.  Stay tuned!
+
+## Citation
+```
+@article{liu2023react,
+  author      = {Liu, Haotian and Son, Kilho and Yang, Jianwei and Liu, Ce and Gao, Jianfeng and Lee, Yong Jae and Li, Chunyuan},
+  title       = {Learning Customized Visual Models with Retrieval-Augmented Knowledge},
+  publisher   = {arXiv:XXXX},
+  year        = {2023},
+}
+```
 
 ## Contributing
 
