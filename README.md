@@ -2,7 +2,7 @@
 
 [Haotian Liu](https://hliu.cc), [Kilho Son](#), [Jianwei Yang](https://jwyang.github.io/), [Ce Liu](#), [Jianfeng Gao](https://www.microsoft.com/en-us/research/people/jfgao/), [Yong Jae Lee*](https://pages.cs.wisc.edu/~yongjaelee/), [Chunyuan Li*](https://chunyuan.li/)
 
-[[Project Page](https://react-vl.github.io/)] [[Paper](https://arxiv.org/abs/XXXXX)]
+[[Project Page](https://react-vl.github.io/)] [[Paper](https://arxiv.org/abs/2301.07094)]
 
 ![Teaser figure](figures/concept.gif)
 
@@ -18,7 +18,7 @@ Code comming soon.  Stay tuned!
 @article{liu2023react,
   author      = {Liu, Haotian and Son, Kilho and Yang, Jianwei and Liu, Ce and Gao, Jianfeng and Lee, Yong Jae and Li, Chunyuan},
   title       = {Learning Customized Visual Models with Retrieval-Augmented Knowledge},
-  publisher   = {arXiv:XXXX},
+  publisher   = {arXiv:2301.07094},
   year        = {2023},
 }
 ```
