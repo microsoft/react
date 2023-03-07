@@ -2,7 +2,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-customized-visual-models-with/semi-supervised-image-classification-on-1)](https://paperswithcode.com/sota/semi-supervised-image-classification-on-1?p=learning-customized-visual-models-with)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-customized-visual-models-with/semi-supervised-image-classification-on-2)](https://paperswithcode.com/sota/semi-supervised-image-classification-on-2?p=learning-customized-visual-models-with)
 
-# REACT: Learning Customized Visual Models with Retrieval-Augmented Knowledge
+# REACT: Learning Customized Visual Models with Retrieval-Augmented Knowledge (CVPR 2023)
 
 [Haotian Liu](https://hliu.cc), [Kilho Son](#), [Jianwei Yang](https://jwyang.github.io/), [Ce Liu](#), [Jianfeng Gao](https://www.microsoft.com/en-us/research/people/jfgao/), [Yong Jae Lee*](https://pages.cs.wisc.edu/~yongjaelee/), [Chunyuan Li*](https://chunyuan.li/)
 
@@ -22,7 +22,7 @@ Code comming soon.  Stay tuned!
 @article{liu2023react,
   author      = {Liu, Haotian and Son, Kilho and Yang, Jianwei and Liu, Ce and Gao, Jianfeng and Lee, Yong Jae and Li, Chunyuan},
   title       = {Learning Customized Visual Models with Retrieval-Augmented Knowledge},
-  publisher   = {arXiv:2301.07094},
+  publisher   = {CVPR},
   year        = {2023},
 }
 ```
