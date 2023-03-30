@@ -32,6 +32,8 @@ You may skip this step if you want to focus on building customized models on sta
 
 REACT proposes the efficient and effective *locked-text gated-image tuning* for tuning customized model on the retrieved dataset, with a performance improvement of up to 5.4% improvements on ImageNet. See [`react_customization`](./react_customization) for details.
 
+![Teaser figure](https://react-vl.github.io/images/model_tuning_cmp.png)
+
 ## Pretrained Models
 
 ### ImageNet-1K
