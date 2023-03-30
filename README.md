@@ -2,7 +2,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-customized-visual-models-with/semi-supervised-image-classification-on-1)](https://paperswithcode.com/sota/semi-supervised-image-classification-on-1?p=learning-customized-visual-models-with)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-customized-visual-models-with/semi-supervised-image-classification-on-2)](https://paperswithcode.com/sota/semi-supervised-image-classification-on-2?p=learning-customized-visual-models-with)
 
-# REACT: Learning Customized Visual Models with Retrieval-Augmented Knowledge (CVPR 2023)
+## REACT: Learning Customized Visual Models with Retrieval-Augmented Knowledge (CVPR 2023, Highlight 2.5%)
 
 [Haotian Liu](https://hliu.cc), [Kilho Son](#), [Jianwei Yang](https://jwyang.github.io/), [Ce Liu](#), [Jianfeng Gao](https://www.microsoft.com/en-us/research/people/jfgao/), [Yong Jae Lee*](https://pages.cs.wisc.edu/~yongjaelee/), [Chunyuan Li*](https://chunyuan.li/)
 
@@ -13,9 +13,38 @@
 - Introducing a customization stage to the lifecycle of foundation models!
 - REACT customizes foundation models to downstream tasks without the need of any labeled data.
 
-## Code Release
+## :fire: News
 
-Code comming soon.  Stay tuned!
+* **[2023.03.29]** Code base and checkpoints are released.
+* **[2023.03.25]** Our research paper is selected as <b>highlight</b> (2.5% acceptance rate)!
+* **[2023.03.24]** Our new checkpoint based on OpenCLIP-G/14 achieves <b>81.0%</b> zero-shot on ImageNet, the <b>new SOTA</b> among public checkpoints!
+* **[2023.02.28]** Paper is accepted to CVPR 2023.
+* **[2023.01.17]** REACT paper is released.
+
+## Code
+
+### [:globe_with_meridians:	Stage 1: Retrieval](./react_retrieval)
+REACT provides a pipeline that supports building index on a large dataset, and efficiently queries and retrieves relevant data for downstream tasks with information as simple as class names. See [`react_retrieval`](./react_retrieval) for details.
+
+You may skip this step if you want to focus on building customized models on standard benchmarks like ImageNet-1K and ELEVATER, by directly using our retrieved indices.
+
+### [:art: Stage 2: Customization](./react_customization) 
+
+REACT proposes the efficient and effective *locked-text gated-image tuning* for tuning customized model on the retrieved dataset, with a performance improvement of up to 5.4% improvements on ImageNet. See [`react_customization`](./react_customization) for details.
+
+## Pretrained Models
+
+### ImageNet-1K
+
+|                        | Baseline | REACT <br/> (Locked-Text) <br/> LAION-400M                                                                                                                                                                                                                            | REACT <br/> (Gated-Image) <br/> LAION-400M                                                                                                                                                                                                                             | REACT  <br/> (Gated-Image) <br/> LAION-2B                                                                                                        |
+|------------------------|------|-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| CLIP (B32, WIT-400M)   | 63.2 | 66.9 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/clip-vit-base-32-locked-text.pt)) | 68.6 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/clip-vit-base-32-gated-image.pt))                         | --                                                                                                                      |
+| OpenCLIP (B32, L-400M) | 62.9 | 65.7 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/openclip-vit-base-32-locked-text.pt)) | 66.4 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/openclip-vit-base-32-gated-image.pt))                 | --                                                                                                                      |
+| OpenCLIP (B32, L-2B)   | 66.6 | 67.5 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/openclip-laion2b-vit-base-32-locked-text.pt)) | 69.5 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/openclip-laion2b-vit-base-32-gated-image.pt)) | --                                                                                                                      |
+| CLIP (B16, WIT-400M)   | 68.6 | 71.6 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/clip-vit-base-16-locked-text.pt)) | 73.4 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/clip-vit-base-16-gated-image.pt))                         | --                                                                                                                      |
+| CLIP (L14, WIT-400M)   | 75.3 | -- | 78.1 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/clip-vit-large-14-gated-image.pt))                                                                                                                                    | 79.8 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/clip-vit-large-14-gated-image-laion2b.pt))     |
+| OpenCLIP (L14, L-2B)   | 75.3 | -- | 76.4 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/openclip-vit-large-14-gated-image.pt))                                                                                                                                | 78.6 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/openclip-vit-large-14-gated-image-laion2b.pt)) |
+| OpenCLIP (G14, L-2B)   | 80.1 | -- | --                                                                                                                                                                                                                                             | 81.0 ([hf](https://huggingface.co/react-vl/react-in1k/blob/main/openclip-vit-bigG-14-gated-image-laion2b.pt))  |
 
 ## Citation
 ```
@@ -26,6 +55,10 @@ Code comming soon.  Stay tuned!
   year        = {2023},
 }
 ```
+
+## Acknowledgement
+
+We are grateful for the contributions of several open-source projects, including [CLIP](https://github.com/openai/CLIP), [OpenCLIP](https://github.com/mlfoundations/open_clip), [LAION.AI](https://laion.ai/), [FAISS](https://github.com/facebookresearch/faiss), [Autofaiss](https://github.com/criteo/autofaiss), [img2dataset](https://github.com/rom1504/img2dataset), and [ELEVATER](https://github.com/Computer-Vision-in-the-Wild/Elevater_Toolkit_IC).
 
 ## Contributing
 
